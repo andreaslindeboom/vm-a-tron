@@ -1,4 +1,4 @@
 database:
-    db: db
-    user: user
-    pass: password
+    database_name: "{{ app_name }}"
+    username: "{{ app_name }}"
+    password: "{{ app_name }}"

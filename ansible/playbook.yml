@@ -14,5 +14,5 @@
     - init
     - nginx
     - hhvm
-#    - mysql
+    - mysql
 #    - composer
