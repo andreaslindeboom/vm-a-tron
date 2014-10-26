@@ -14,3 +14,12 @@
 - name: More configure the timezone
   sudo: yes
   file: src=/usr/share/zoneinfo/{{timezone}} dest=/etc/localtime state=link force=yes backup=yes
+
+- name: Move dedicated aliases file into place
+  template: src=aliases.tpl dest=/home/vagrant/.aliases
+
+- name: Load dedicated aliases file in .bashrc
+  lineinfile: dest=/home/vagrant/.bashrc line="{{ item }}"
+  with_items:
+    - '\n# load aliases from a dedicated file'
+    - 'source /home/vagrant/.aliases'
