@@ -15,4 +15,4 @@
     - nginx
     - hhvm
     - mysql
-#    - composer
+    - composer
