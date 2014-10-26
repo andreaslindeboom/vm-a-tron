@@ -13,6 +13,6 @@
   roles:
     - init
     - nginx
-#    - hhvm
+    - hhvm
 #    - mysql
 #    - composer
