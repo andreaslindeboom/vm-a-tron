@@ -1,7 +1,7 @@
 server {
     listen  80;
 
-    root {{ nginx_vhost_docroot }};
+    root {{ server_document_root }};
     index index.html index.php;
 
     server_name {{ server_name }} {{ ansible_eth1.ipv4.address }};

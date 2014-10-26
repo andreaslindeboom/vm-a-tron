@@ -1,5 +1,4 @@
 ---
-nginx_vhost_docroot: /var/www/"{{ app_name }}"
 nginx_vhost_path: /etc/nginx/sites-available
 nginx_vhost_file: "{{ app_name }}"
 nginx_vhost_template: default.tpl
