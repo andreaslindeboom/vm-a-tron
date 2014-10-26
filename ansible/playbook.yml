@@ -1,0 +1,20 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    web_server: nginxhhvm
+    servername: spellstruck.nl www.spellstruck.nl
+    timezone: Europe/Amsterdam
+  vars_files:
+    - vars/mysql.yml
+    - vars/common.yml
+    - [ "vars/nginxhhvm.yml", "vars/ws_defaults.yml" ]
+  roles:
+    - init
+    - php5-cli
+    - nginx
+    - hhvm
+    - mysql
+    - composer
+    - phpcommon
+    - app
