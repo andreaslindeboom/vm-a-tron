@@ -4,7 +4,7 @@
   vars:
     app_name: spellstruck
     web_server: nginx
-    servername: spellstruck.nl www.spellstruck.nl
+    servername: spellstruck.dev.nl www.spellstruck.dev.nl
     timezone: Europe/Amsterdam
   vars_files:
     - vars/common.yml

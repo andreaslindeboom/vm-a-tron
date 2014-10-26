@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
         box.vm.network :private_network, ip: "192.168.33.99"
 
-        box.hostsupdater.aliases = [ "spellstruck.nl", "www.spellstruck.nl" ]
+        box.hostsupdater.aliases = [ "spellstruck.dev.nl", "www.spellstruck.dev.nl" ]
 
         config.ssh.forward_agent = true
 
