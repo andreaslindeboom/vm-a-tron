@@ -1,6 +1,4 @@
 ---
-    php_ppa: php5-5.6
-    doc_root: /vagrant
-    sys_packages: ["git","vim"]
-    dist: precise
-    php_packages: ["php5-xdebug"]
+  app_name: spellstruck
+  server_name: spellstruck.dev.nl www.spellstruck.dev.nl
+  timezone: Europe/Amsterdam
