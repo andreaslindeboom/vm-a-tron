@@ -9,6 +9,4 @@
   apt: update_cache=yes
 
 - name: Install HHVM
-  apt: pkg={{ item }} state=latest
-  with_items:
-    - hhvm
+  apt: pkg=hhvm state=latest

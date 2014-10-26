@@ -1,10 +1,10 @@
 server {
     listen  80;
 
-    root {{ doc_root }};
+    root {{ nginx_vhost_docroot }};
     index index.html index.php;
 
-    server_name {{ servername }} {{ ansible_eth1.ipv4.address }};
+    server_name {{ server_name }} {{ ansible_eth1.ipv4.address }};
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
