@@ -1,5 +1,7 @@
 ---
-nginx_available_vhost_path: /etc/nginx/sites-available
-nginx_enabled_vhost_path: /etc/nginx/sites-enabled
+nginx_config_dir: /etc/nginx
+nginx_config_file: "{{ nginx_config_dir }}/nginx.conf"
+nginx_available_vhost_path: "{{ nginx_config_dir }}/sites-available"
+nginx_enabled_vhost_path: "{{ nginx_config_dir }}/sites-enabled"
 nginx_vhost_file: "{{ app_name }}"
 nginx_vhost_template: default.tpl

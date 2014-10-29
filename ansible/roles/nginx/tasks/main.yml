@@ -3,6 +3,9 @@
   sudo: yes
   apt: pkg=nginx state=latest
 
+- name: Change Nginx user
+  replace: dest={{ nginx_config_file }} regexp='user nginx;' replace='user vagrant;'
+
 - name: Change default Nginx site
   sudo: yes
   template: src={{ nginx_vhost_template }} dest={{ nginx_available_vhost_path }}/{{ nginx_vhost_file }}
