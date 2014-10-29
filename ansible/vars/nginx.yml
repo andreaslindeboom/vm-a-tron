@@ -1,4 +1,5 @@
 ---
-nginx_vhost_path: /etc/nginx/sites-available
+nginx_available_vhost_path: /etc/nginx/sites-available
+nginx_enabled_vhost_path: /etc/nginx/sites-enabled
 nginx_vhost_file: "{{ app_name }}"
 nginx_vhost_template: default.tpl
