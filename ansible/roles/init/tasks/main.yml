@@ -14,8 +14,8 @@
   sudo: yes
   file: src=/usr/share/zoneinfo/{{timezone}} dest=/etc/localtime state=link force=yes backup=yes
 
-- name: Ensure source document root base directory exists
-  file: path={{app_document_root_base}} state=directory
+- name: Ensure source document root directory exists
+  file: path={{app_document_root}} state=directory
 
 - name: Symlink source document root base directory into server document root
   file: src="{{ app_document_root_base }}" dest="{{server_document_root_base}}" state=link
