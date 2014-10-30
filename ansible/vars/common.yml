@@ -1,8 +1,9 @@
 ---
   app_name: spellstruck
   server_name: spellstruck.dev.nl www.spellstruck.dev.nl
+  http_public_directory: web
   app_document_root_base: /vagrant/www
-  app_document_root: "{{ app_document_root_base }}/{{ app_name }}/public"
+  app_document_root: "{{ app_document_root_base }}/{{ app_name }}/{{ http_public_directory }}"
   server_document_root_base: /var/www
-  server_document_root: "{{ server_document_root_base }}/{{ app_name }}/public"
+  server_document_root: "{{ server_document_root_base }}/{{ app_name }}/{{ http_public_directory }}"
   timezone: Europe/Amsterdam
