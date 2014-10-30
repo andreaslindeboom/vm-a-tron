@@ -10,3 +10,7 @@
 
 - name: Install HHVM
   apt: pkg=hhvm state=latest
+
+- name: Start HHVM
+  service: name=hhvm state=running enabled=yes
+  
