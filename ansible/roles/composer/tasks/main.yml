@@ -3,3 +3,6 @@
 
 - name: Alias Composer to be run with HHVM with SlowTimer error fix
   lineinfile: dest=/home/vagrant/.aliases line="alias composer=\"hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer\""
+
+- name: Install unzip to enable running of Composer via HHVM
+  apt: pkg=unzip state=latest
