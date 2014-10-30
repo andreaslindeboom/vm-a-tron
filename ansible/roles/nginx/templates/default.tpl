@@ -6,6 +6,8 @@ server {
 
     server_name {{ server_name }} {{ ansible_eth1.ipv4.address }};
 
+    include hhvm.conf;
+
     location / {
         try_files $uri $uri/ /index.php?$query_string;
     }
